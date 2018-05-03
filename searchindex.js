@@ -1,0 +1,1 @@
+Search.setIndex({envversion:49,filenames:["index"],objects:{},objnames:{},objtypes:{},terms:{contents:0,index:0,module:0,page:0,search:0},titles:["Welcome to sphinx_gh-pages&#8217;s documentation!"],titleterms:{"'s":0,"-pages":0,_gh:0,and:0,documentation:0,indices:0,sphinx:0,tables:0,to:0,welcome:0}})
