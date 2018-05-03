@@ -3,6 +3,7 @@ sphinx_gh-pages
 
 Sphinx と gh-pages の組み合わせ方勉強用リポジトリ。
 
+[Welcome to sphinx_gh-pages’s documentation! — sphinx_gh-pages 1.0.0 documentation](https://mikoto2000.github.io/sphinx_gh-pages/)
 
 gh-pages 作成手順:
 ------------------
