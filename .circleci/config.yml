@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: mikoto2000/sphinx
+    working_directory: ~/sphinx_gh-pages/work
+    steps:
+      - checkout
+      - run:
+          name: Build html
+          command: cd work; make html
+
