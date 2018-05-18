@@ -9,4 +9,7 @@ jobs:
       - run:
           name: Build html
           command: cd work; make html
+      - store_artifacts:
+          path: work/build/html
+          destination: htmls
 
