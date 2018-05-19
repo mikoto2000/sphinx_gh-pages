@@ -9,7 +9,39 @@ jobs:
       - run:
           name: Build html
           command: cd work; make html
-      - store_artifacts:
-          path: work/build/html
-          destination: htmls
+      - persist_to_workspace:
+          root: work/build/html
+          paths:
+            - ./*
+  deploy:
+    machine: true
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "bd:d3:5c:3d:ff:e9:6b:4e:c3:fd:89:2e:e7:48:67:c9"
+      - attach_workspace:
+          at: work/build/html
+      - run:
+          name: Clone gh-pages
+          command: git clone -b gh-pages git@github.com:mikoto2000/sphinx_gh-pages.git
+      - run:
+          name: Delete exists file
+          command: rm -rf sphinx_gh-pages/*
+      - run:
+          name: Copy build results
+          command: cp -rf work/build/html/* sphinx_gh-pages
+      - run:
+          name: Setup git
+          command: cd sphinx_gh-pages;git config --local user.name "mikoto2000"; git config --local user.email "mikoto2000@gmail.com"
+      - run:
+          name: Git push
+          command: cd sphinx_gh-pages; git add ./; git commit -m "From `git log --oneline -n 1`"; git push
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
 
