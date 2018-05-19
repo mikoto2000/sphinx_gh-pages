@@ -6,7 +6,7 @@
 Welcome to sphinx_gh-pages's documentation!
 ===========================================
 
-ドキュメント更新テスト。
+ドキュメント更新テスト その２。
 
 Contents:
 
