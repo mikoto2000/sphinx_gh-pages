@@ -35,7 +35,7 @@ jobs:
           command: cd sphinx_gh-pages;git config --local user.name "mikoto2000"; git config --local user.email "mikoto2000@gmail.com"
       - run:
           name: Git push
-          command: cd sphinx_gh-pages; git add ./; git commit -m "From `git log --oneline -n 1`"; git push
+          command: cd sphinx_gh-pages; git add ./; git commit -m "From `git log --oneline origin/master -n 1`"; git push
 workflows:
   version: 2
   build_and_deploy:
