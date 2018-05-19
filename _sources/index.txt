@@ -6,6 +6,8 @@
 Welcome to sphinx_gh-pages's documentation!
 ===========================================
 
+ドキュメント更新テスト。
+
 Contents:
 
 .. toctree::
