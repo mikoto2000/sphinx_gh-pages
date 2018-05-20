@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: mikoto2000/sphinx
+      - image: mikoto2000/sphinx:1.7.4
     working_directory: ~/sphinx_gh-pages/work
     steps:
       - checkout
